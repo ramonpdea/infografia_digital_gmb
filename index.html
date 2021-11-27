@@ -59,7 +59,7 @@
             h3 {
                 font-size: calc(1.5rem + 1vw);
             }
-            
+
             p {
                 text-align: justify;
                 text-justify: inter-word;
@@ -85,6 +85,9 @@
                         Phasellus et fringilla sapien. Curabitur sed elit eget libero tempus semper. Fusce posuere ipsum sed sem sagittis luctus. Nam sit amet odio scelerisque, consequat purus eu, condimentum mauris.
                     </p>
                 </div>
+                <div class="col-sm-5 mx-auto">
+                    <img src="img/gibon.png" alt="Ilustración Gibón" class="w-80 my-3" />
+                </div>
             </div>
         </header>
         <main>
@@ -93,10 +96,9 @@
                     <h3 class="text-center pt-5 pb-2">Habitando el dosel de la selva</h3>
                     <img src="img/2x1.png" alt="Mapa" class="w-100 my-3" />
                     <p>
-                        Se encuentra desde el Sur de China hasta la isla de Sumatra, Indonesia. La mayor parte de su tiempo lo pasa en la copa de los árboles entre las ramas y hojas 
-                        que se entrelazan.
+                        Se encuentra desde el Sur de China hasta la isla de Sumatra, Indonesia. La mayor parte de su tiempo lo pasa en la copa de los árboles entre las ramas y hojas que se entrelazan.
                     </p>
-                    <br>
+                    <br />
                     <p>
                         Es un animal sociable que necesita de un gran territorio para su grupo familiar que contiene de 2 a 6 integrantes.
                     </p>
@@ -104,8 +106,43 @@
                 </div>
             </section>
             <section>
-                <div class="col-sm-9 mx-auto">
-                     <img src="img/gibon.png" alt="Ilustración Gibón" class="w-100 my-3" />
+                <div class="text-center py-3 px-3 px-sm-2 px-md-1 px-lg-0">
+                    <!--Este elemento es afectado con JavaScript-->
+                    <object data="img/conservacion_lc.svg" type="image/svg+xml" id="conservacion"></object>
+                    <!--Vean más abajo, las líneas 249 a 266-->
+                </div>
+                                <div class="col-sm-5 mx-auto">
+                <div class="sketchfab-embed-wrapper">
+                    <iframe
+                        title="White-handed gibbon skull and mandible"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/d7b97787ea1a4d8eae8f7ff83370be80/embed"
+                    >
+                    </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4a4a4a;">
+                        <a
+                            href="https://sketchfab.com/3d-models/white-handed-gibbon-skull-and-mandible-d7b97787ea1a4d8eae8f7ff83370be80?utm_medium=embed&utm_campaign=share-popup&utm_content=d7b97787ea1a4d8eae8f7ff83370be80"
+                            target="_blank"
+                            style="font-weight: bold; color: #1caad9;"
+                        >
+                            White-handed gibbon skull and mandible
+                        </a>
+                        by
+                        <a href="https://sketchfab.com/FloridaMuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=d7b97787ea1a4d8eae8f7ff83370be80" target="_blank" style="font-weight: bold; color: #1caad9;"> FloridaMuseum </a> on
+                        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=d7b97787ea1a4d8eae8f7ff83370be80" target="_blank" style="font-weight: bold; color: #1caad9;">Sketchfab</a>
+                    </p>
+                </div>
+ </div>
+                <div class="col-sm-5 mx-auto">
+                    <object class="mx-5" data="img/velocidades-mamiferos.svg" type="image/svg+xml"></object>
                 </div>
             </section>
             <section>
@@ -125,17 +162,12 @@
                         </h5>
                         <img src="img/2x1.png" alt="describa lo que se ve en la imagen" class="w-100" />
                     </div>
-                    <div class="col-sm-9 mx-auto">
-                        <h3 class="text-center pt-5 pb-2">Conservación</h3>
-                        <img src="img/2x1.png" alt="describa lo que se ve en la imagen" class="w-100" />
-                    </div>
                 </div>
             </section>
             <section class="container">
                 <div class="row">
                     <div class="col-sm-9 mx-auto">
                         <h3 class="text-center pt-5 pb-2">Presencia</h3>
-                        <object class="mx-5" data="img/velocidades-mamiferos.svg" type="image/svg+xml"></object>
                     </div>
                     <div class="col-sm-11 mx-auto">
                         <h5 class="text-center pt-5 pb-2">
@@ -223,5 +255,23 @@
                 </div>
             </footer>
         </main>
+        <!--EN EL SCRIPT QUE SIGUE AJUSTA EL SVG DEL ESTADO DE CONSERVACIÓN AL ANCHO DE LA VENTANA-->
+        <script>
+            window.addEventListener("DOMContentLoaded", elAjuste);
+            window.addEventListener("resize", elAjuste);
+            var ajustable = document.getElementById("conservacion");
+            function elAjuste() {
+                if (window.innerWidth >= 1000) {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-50");
+                } else if (window.innerWidth < 1000 && window.innerWidth > 700) {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-75");
+                } else {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-100");
+                }
+            }
+        </script>
     </body>
 </html>
